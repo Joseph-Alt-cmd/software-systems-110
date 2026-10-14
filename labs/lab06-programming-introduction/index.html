@@ -35,7 +35,7 @@
 
         <div class="container">
 
-            <h1>Decision Making Program</h1>
+            <h1>Joseph the Kangaroo</h1>
 
             <p>
                 Change the boolean variables below and then run the program.
@@ -48,6 +48,8 @@
                 I walk outside of my home. It's a beautiful fall day in La Crosse, Wisconsin.
                 <br>
                 The sun is shining. The air smells like apples and crisp autumn leaves.
+                <br>
+                There is a shadowy figure in the distance. I can't tell if it's a person or an animal.
             </p>
 
             <div class="variable-container">
@@ -57,7 +59,7 @@
                     <h3>Hello Option</h3>
 
                     <p>
-                        Should I say "Hello, World!"?
+                        Should I say "Hello, to it!"?
                     </p>
 
                     <label for="helloInput">
@@ -76,7 +78,7 @@
                     <h3>Goodbye Option</h3>
 
                     <p>
-                        Should I say "Goodbye, World!"?
+                        Should I say "Goodbye, Buddy!"?
                     </p>
 
                     <label for="goodbyeInput">
@@ -145,7 +147,7 @@
                 doISayHello = true
                 doISayGoodbye = true
              
-                Observation:
+                Observation:While both variables are true, only "Hello world" is displayed and it ignores the goodbye message.
             
                 ***********************************************************************
                 
@@ -153,7 +155,7 @@
                 doISayHello = false
                 doISayGoodbye = false
              
-                Observation:
+                Observation: When both statements are false, the default message is displayed.
             
                 ***********************************************************************
 
@@ -161,7 +163,7 @@
                 doISayHello = true
                 doISayGoodbye = false
              
-                Observation:
+                Observation: Just like the first test, only hello world is shoewn however this time we have goodbye world false.
 
                 ***********************************************************************    
 
@@ -169,23 +171,28 @@
                 doISayHello = false
                 doISayGoodbye = true
              
-                Observation:
+                Observation: This is the only test where you see goodbye world since hello world is false unlike every other test.
                 
             */
     
 
             let message;
-            let finalMessage;
+            let finalMessage;   
 
-            if(doISayHello == true) {
+            if(doISayHello == true && doISayGoodbye == true) {
 
                 // Assign a greeting message.
-                message = "Hello, World!";
+                message = "Goodhellobye, world!";
+
+            } else if(doISayHello == true) {
+
+                // Assign a greeting message.
+                message = "Hello?";
 
             } else if(doISayGoodbye == true) {
 
                 // Assign a goodbye message.
-                message = "Goodbye, World!";
+                message = "Goodbye!";
 
             } else {
 
@@ -195,7 +202,7 @@
             }
 
             // Assign a message that always displays.
-            finalMessage = "I am tired of being outside. I am going inside now.";
+            finalMessage = "IS THAT FREDDY FAZBEAR?! RUN INSIDE! NOW!";
 
             displayMessages(message, finalMessage);
 
